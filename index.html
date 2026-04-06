@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structured Action Items</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="card hero">
+      <div>
+        <p class="eyebrow">Transcript → Tasks</p>
+        <h1>Turn messy meeting notes into clean action items</h1>
+        <p>Paste a transcript, extract tasks by assignee, then export a CSV for Notion or Linear.</p>
+      </div>
+      <button id="demo">Load sample transcript</button>
+    </section>
+    <section class="grid two-up">
+      <article class="card stack">
+        <h2>Transcript</h2>
+        <textarea id="transcript" rows="18" placeholder="Paste transcript here..."></textarea>
+        <button id="extract">Extract actions</button>
+      </article>
+      <article class="card stack">
+        <div class="toolbar">
+          <h2>Action items</h2>
+          <button id="export" class="ghost">Export CSV</button>
+        </div>
+        <table>
+          <thead><tr><th>Task</th><th>Assignee</th><th>Context</th></tr></thead>
+          <tbody id="results"></tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
